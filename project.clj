@@ -6,4 +6,12 @@
   :dependencies [[org.clojure/clojure "1.8.0"]]
   :repositories [["releases" {:url "https://clojars.org/repo/"
                               :username :env
-                              :password :env}]])
+                              :password :env}]]
+  :release-tasks [["vcs" "assert-committed"]
+                  ["change" "version" "leiningen.release/bump-version" "release"]
+                  ["vcs" "commit"]
+                  ["vcs" "tag" "--no-sign"]
+                  ["deploy"]
+                  ["change" "version" "leiningen.release/bump-version"]
+                  ["vcs" "commit"]
+                  ["vcs" "push"]])

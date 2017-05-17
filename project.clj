@@ -1,4 +1,4 @@
-(defproject ci-test "0.1.1"
+(defproject ci-test "0.1.1-SNAPSHOT"
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
@@ -10,9 +10,9 @@
                               :sign-releases false}]]
   :release-tasks [["vcs" "assert-committed"]
                   ["change" "version" "leiningen.release/bump-version" "release"]
-                  #_["vcs" "commit"]
-                  #_["vcs" "tag" "--no-sign"]
-                  #_["deploy"]
-                  #_["change" "version" "leiningen.release/bump-version"]
-                  #_["vcs" "commit"]
-                  #_["vcs" "push"]])
+                  ["vcs" "commit"]
+                  ["vcs" "tag" "--no-sign"]
+                  ["deploy"]
+                  ["change" "version" "leiningen.release/bump-version"]
+                  ["vcs" "commit"]
+                  ["vcs" "push"]])

@@ -9,10 +9,10 @@
                               :password :env
                               :sign-releases false}]]
   :release-tasks [["vcs" "assert-committed"]
-                  ["change" "version" "leiningen.release/bump-version" "release"]
-                  ["vcs" "commit"]
-                  ["vcs" "tag" "--no-sign"]
-                  ["deploy"]
-                  ["change" "version" "leiningen.release/bump-version"]
-                  ["vcs" "commit"]
-                  ["vcs" "push"]])
+                  #_["change" "version" "leiningen.release/bump-version" "release"]
+                  #_["vcs" "commit"]
+                  #_["vcs" "tag" "--no-sign"]
+                  #_["deploy"]
+                  #_["change" "version" "leiningen.release/bump-version"]
+                  #_["vcs" "commit"]
+                  #_["vcs" "push"]])

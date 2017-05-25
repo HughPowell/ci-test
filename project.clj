@@ -1,4 +1,4 @@
-(defproject ci-test "0.1.17-SNAPSHOT"
+(defproject ci-test "0.1.17"
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
